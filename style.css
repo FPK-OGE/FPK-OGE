@@ -1,0 +1,296 @@
+html{
+    height: 100%;
+    font-family: "Parkinsans", serif;
+}
+
+p{
+    margin: 0;
+    color: white;
+}
+
+body {
+padding: 0;
+margin: 0;
+height: 100%;
+}
+
+.WindowsXp{
+    display: flex;
+	flex-direction: column;
+	min-height: 100%;
+    background-image: url(photo/фон.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.WindowsXp-off{
+    display: none;
+}
+
+header{
+    flex: 1 0 auto;
+}
+
+footer{
+    flex: 0 0 auto;
+}
+
+.background-taskbar{
+background: linear-gradient(rgb(37, 37, 185), rgb(44, 65, 255));
+width: 100%;
+height: 40px;
+display: flex;
+
+}
+
+.btn-taskbar{
+    background: linear-gradient(rgb(2, 156, 2), rgb(2, 192, 2));
+    border: 1px solid rgb(2, 145, 2);
+    border-top-right-radius: 15px;
+    border-bottom-right-radius:15px;
+    display: flex;
+    height: 40px;
+    width: 140px;
+    font-size: 25px;
+    font-family: "Parkinsans", serif;
+    color: white;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.btn-taskbar:hover{
+    opacity: 0.8;
+    transition: 0.2s;
+}
+
+.taskbar-on{
+    background-color: white;
+    border-right: 2px solid rgb(37, 37, 185);
+    border-top: 40px solid rgb(37, 37, 185);
+    border-bottom: 40px solid rgb(37, 37, 185);
+    border-left: 2px solid rgb(37, 37, 185);
+    max-width: 400px;
+    min-height: 400px;
+    border-radius: 10px;
+    transform: rotatex(90deg);
+    transition: 0.2s;
+    transform-origin: bottom;
+    margin-bottom: 5px;
+    margin-left: 5px;
+}
+
+.task-off{
+    transform: rotatex(0deg);
+    transition: 0.2s;
+}
+
+.taskbar-border-bottom-off{
+    position: absolute;
+    margin-top: 405px;
+    margin-left: 220px;
+    display: flex;
+}
+
+#btn-off{
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+#btn-off:hover{
+    opacity: 0.9;
+    transition: 0.1s;
+}
+
+.png-win{
+    margin-top: 3px;
+    margin-left: 5px;
+}
+
+#clock{
+   margin-top: 8px;
+   color: white;
+   margin-right: 20px; 
+}
+
+.clock-center{
+    margin-left: auto;
+    /* background: linear-gradient(rgb(1, 139, 163), rgb(2, 204, 255)); */
+    padding-left: 80px;
+    display: flex;
+}
+
+.btn-internet {
+    display: grid;
+    background: none;
+    border: none;
+    cursor: pointer;
+    justify-content: center;
+    font-family: "Roboto Slab", serif;
+    
+}
+
+.logo{
+    height:65px;
+    width: 55px;
+    margin-left: 15px;
+}
+
+.logo2 {
+    height:65px;
+    width: 55px;
+    margin-left: 15px;
+    opacity: 0.5;
+    background-color: blue;
+}
+
+.logo-text2 {
+    background-color: blue;
+}
+
+.item-1{
+    margin-top: 20px;
+    margin-left: 20px;
+    
+}
+
+.FPK-OGE{
+    background-color: white;
+    height: 200px;
+    width: 200px;
+}
+
+.FPK-OGE-OFF{
+    display: none;
+}
+
+.header-off{
+    background-color: blue;
+    flex: 1 0 auto;
+    min-height: 100px;
+    max-height: 100px;
+    border-bottom: 3px white solid;
+}
+
+.main{
+    display: grid;
+	flex-direction: column;
+	min-height: 100%;
+    background-color: rgb(108, 199, 241);
+}
+
+.main-off{
+    display: grid;
+    justify-content: center;
+    margin-left: 200px;
+    margin-top: 100px;
+}
+
+.main-text{
+    margin-top: -100px;
+    margin-left: -100px;
+    font-size: 26px;
+    
+}
+
+
+.off-logo{
+    height: 150px; 
+    width: 210px; 
+    margin-bottom: 30px;
+
+}
+
+.footer-off{
+    background-color: blue;
+    flex: 0 0 auto;
+    min-height: 100px;
+    max-height: 100px;
+    margin-top: auto;
+    border-top: 3px white solid;
+}
+
+.loading {
+    font-weight: bold;
+    display:inline-block;
+    font-family: monospace;
+    font-size: 30px;
+    clip-path: inset(0 3ch 0 0);
+    animation: l 1s steps(4) infinite;
+  }
+  
+  @keyframes l {
+    to {
+      clip-path: inset(0 -1ch 0 0)
+    }
+  }
+
+  .off{
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    
+  }
+
+  .off-none{
+    display: none;
+  }
+
+  .main-none{
+    display: none;
+  }
+
+  .preview {
+    background-color: rgba(255, 255, 255, 0.836);
+    min-width: 100%;
+    min-height: 100%;
+    z-index: 100;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Roboto Slab", serif;
+    animation: preview 8s forwards;
+}
+
+@keyframes preview {
+    0% {opacity: 1; display: flex;}
+    60%{opacity: 1; display: flex;}
+    90% {opacity: 1; display: flex;}
+    100% {opacity: 0; display: none;}
+}
+
+.preview-main{
+    display: flex;
+}
+
+.preview-text {
+    position: absolute;
+    color: black;
+    opacity: 0;
+    animation: prev-text 7s forwards;
+    margin-left: 100px;
+    margin-top: -30px;
+}
+
+@keyframes prev-text{
+    0% {opacity: 0;}
+    30% {opacity: 0;}
+    50% {opacity: 1;}
+    60% {opacity: 1;}
+    70% {opacity: 1;}
+    90% {opacity: 1;}
+    100% {opacity: 1;}
+}
+
+
+.preview-logo{
+    animation: logo 8s forwards;  
+}
+
+@keyframes logo {
+    0% {opacity: 0; margin-right: 0px;}
+    20% {opacity: 1; margin-right: 0px;}
+    60% {opacity: 1; margin-right: 350px;}
+    90% {opacity: 1; margin-right: 350px;}
+    100% {opacity: 1; margin-right: 350px;}
+}
