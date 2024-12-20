@@ -16,74 +16,86 @@ let clock = () => {
   
   clock();
 
-  const taskbarOn = document.querySelector('#taskbar-on-js')
-  const BtnTaskbar = document.querySelector('#btn-taskbar')
+  const startOff = document.querySelector('#start-on-js')
+  const btnStart = document.querySelector('#btn-start-js')
 
-  taskbarOn.classList.remove('task-off')
+  btnStart.addEventListener('click', function(){
 
-  BtnTaskbar.addEventListener('click', function(){
-    taskbarOn.classList.toggle('task-off')
-
-  })
-
-  const btnOff = document.querySelector('#btn-off')
-  const main = document.querySelector('#main-js')
-  const windowsXp = document.querySelector('#WindowsXp-js')
-  const off = document.querySelector('#off')
- 
-  windowsXp.classList.remove('WindowsXp-off')
-
-
-  btnOff.addEventListener('click', function(){
-    windowsXp.classList.add('WindowsXp-off')
-    main.classList.remove('main-none')
-
-    setTimeout(function() {
-  
-      off.classList.remove('off-none')
-      main.classList.add('main-none')
-
-    }, 3500);
-
-
-  })
-
-  const item1 = document.querySelector('#item1')
-  const logo = document.querySelector('#logo')
-  const logotext2 = document.querySelector('#logotext2')
-  const btninternet = document.querySelector('#btninternet')
-  const fpk = document.querySelector('#FPK')
-
-  logo.classList.remove('logo2')
-  logotext2.classList.remove('logo-text2')
-
-  btninternet.addEventListener('click', function(){
-    logo.classList.add('logo2')
-    logotext2.classList.add('logo-text2')
-    logo.classList.remove('logo')
-    logotext2.classList.remove('logo-text')
+    startOff.classList.toggle('start-off')
     
+  });
 
-    setTimeout(function() {
-  
-     btninternet.addEventListener('click', function(){
-      fpk.classList.remove('FPK-OGE-OFF')
+  // Изменение темы
+  const BtnNight = document.querySelector('#btn-night-js')
+  const circle = document.querySelector('#circle-js')
+  const background = document.querySelector('#background-js')
 
-     })
+  circle.classList.remove('circle-nights')
+  background.classList.remove('background-night')
 
-    }, 1);
+  BtnNight.addEventListener('click', function(){
 
-    setTimeout(function() {
-  
-      btninternet.addEventListener('click', function(){
-        fpk.classList.remove('FPK-OGE')
- 
-      })
- 
-     }, 500);
-
+    circle.classList.toggle('circle-nights')
+    circle.classList.toggle('circle-day')
+    background.classList.toggle('background-night')
+    background.classList.toggle('background-day')
 
   });
 
 
+  // Открытие фпк
+  const fpk = document.querySelector('#FPK-JS')
+  const logo = document.querySelector('#logo-js')
 
+  logo.addEventListener('click', function(){
+
+    fpk.classList.toggle('FPK-OFF')
+
+  });
+
+  const choice1 = document.querySelector('#choice1-js')
+  const btn1Choice1 = document.querySelector('#btn1-choice1-js')
+  const btn2Choice1 = document.querySelector('#btn2-choice1-js')
+
+  const choiceOge = document.querySelector('#choice-oge-js')
+  const btn1ChoiceOge = document.querySelector('#btn1-choice-oge-js')
+  const btn2ChoiceOge = document.querySelector('#btn2-choice-oge-js')
+  const btn3ChoiceOge = document.querySelector('#btn3-choice-oge-js')
+
+  const choiceEge = document.querySelector('#choice-ege-js')
+  const btn1ChoiceEge = document.querySelector('#btn1-choice-ege-js')
+  const btn2ChoiceEge = document.querySelector('#btn2-choice-ege-js')
+  const btn3ChoiceEge = document.querySelector('#btn3-choice-ege-js')
+
+  choice1.classList.remove('choice1-off')
+  choice1.classList.remove('choice1-none')
+
+
+  btn1Choice1.addEventListener('click', function(){
+
+    choice1.classList.add('choice1-off')
+
+    setTimeout(function() {
+  
+      choice1.classList.add('choice1-none')
+      choiceOge.classList.remove('choice-oge-off')
+
+  
+    }, 550);
+
+  })
+
+  btn2Choice1.addEventListener('click', function(){
+
+    choice1.classList.add('choice1-off')
+
+    setTimeout(function() {
+  
+      choice1.classList.add('choice1-none')
+      choiceEge.classList.remove('choice-ege-off')
+  
+    }, 550);
+
+  })
+
+  

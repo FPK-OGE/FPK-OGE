@@ -1,245 +1,117 @@
-html{
-    height: 100%;
-    font-family: "Parkinsans", serif;
+body{
+    margin: 0;
+    /* background-image: url(photo/540a2104b8829fa12f853acfb6322251.jpg); */
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.background-day{
+    background-image: url(photo/фон.png);
+    transition: 0.5s;
+    opacity: 1;
+}
+
+.background-night{
+    background-image: url(photo/540a2104b8829fa12f853acfb6322251.jpg);
+    transition: 0.5s;
+    opacity: 1;
+}
+
+.button-night{
+    position: absolute;
+    right: 50px;
+    top: 20px;
+}
+
+.btn-night{
+    background-color: rgb(194, 194, 194);
+    border: white 2px solid;
+    border-radius: 42px;
+    width: 100px;
+    height: 50px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-night:hover{
+    background-color: rgb(177, 177, 177);
+    transition: 0.2s;
+}
+
+.circle-day{
+    height: 40px;
+    width: 40px;
+    border-radius: 50px;
+    background-color: rgb(242, 247, 0);
+    margin-left: -2px;
+    transition: 0.5s;
+}
+
+.circle-nights{
+    height: 40px;
+    width: 40px;
+    border-radius: 50px;
+    background-color: rgb(53, 54, 0);
+    margin-left: 45px;
+    transition: 0.5s;
 }
 
 p{
-    margin: 0;
-    color: white;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
-body {
-padding: 0;
-margin: 0;
-height: 100%;
-}
-
-.WindowsXp{
-    display: flex;
-	flex-direction: column;
-	min-height: 100%;
-    background-image: url(photo/фон.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.WindowsXp-off{
-    display: none;
-}
-
-header{
-    flex: 1 0 auto;
+.windxp{
+    display: flex; 
+    flex-direction: column; 
+    min-height: 100vh;
 }
 
 footer{
-    flex: 0 0 auto;
-}
-
-.background-taskbar{
-background: linear-gradient(rgb(37, 37, 185), rgb(44, 65, 255));
+margin-top: auto;
+height: auto;
 width: 100%;
-height: 40px;
+background: linear-gradient(rgb(37, 37, 185), rgb(44, 65, 255));
 display: flex;
-
+margin-top: 0;
 }
 
-.btn-taskbar{
+#clock {
+    right: 0;
+    position: absolute;
+    margin-right: 20px;
+    margin-top: 10px;
+    color: white;
+}
+
+.btn-start{
     background: linear-gradient(rgb(2, 156, 2), rgb(2, 192, 2));
     border: 1px solid rgb(2, 145, 2);
     border-top-right-radius: 15px;
     border-bottom-right-radius:15px;
+    font-size: 24px;
     display: flex;
-    height: 40px;
-    width: 140px;
-    font-size: 25px;
-    font-family: "Parkinsans", serif;
     color: white;
-    transition: 0.2s;
-    cursor: pointer;
-}
-
-.btn-taskbar:hover{
-    opacity: 0.8;
-    transition: 0.2s;
-}
-
-.taskbar-on{
-    background-color: white;
-    border-right: 2px solid rgb(37, 37, 185);
-    border-top: 40px solid rgb(37, 37, 185);
-    border-bottom: 40px solid rgb(37, 37, 185);
-    border-left: 2px solid rgb(37, 37, 185);
-    max-width: 400px;
-    min-height: 400px;
-    border-radius: 10px;
-    transform: rotatex(90deg);
-    transition: 0.2s;
-    transform-origin: bottom;
-    margin-bottom: 5px;
-    margin-left: 5px;
-}
-
-.task-off{
-    transform: rotatex(0deg);
-    transition: 0.2s;
-}
-
-.taskbar-border-bottom-off{
-    position: absolute;
-    margin-top: 405px;
-    margin-left: 220px;
-    display: flex;
-}
-
-#btn-off{
     cursor: pointer;
     transition: 0.1s;
 }
 
-#btn-off:hover{
+.btn-start:hover{
     opacity: 0.9;
     transition: 0.1s;
 }
 
 .png-win{
-    margin-top: 3px;
-    margin-left: 5px;
+    margin-right: 5px;
 }
 
-#clock{
-   margin-top: 8px;
-   color: white;
-   margin-right: 20px; 
+.text-btn{
+    margin-right: 5px;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
-.clock-center{
-    margin-left: auto;
-    /* background: linear-gradient(rgb(1, 139, 163), rgb(2, 204, 255)); */
-    padding-left: 80px;
-    display: flex;
-}
-
-.btn-internet {
-    display: grid;
-    background: none;
-    border: none;
-    cursor: pointer;
-    justify-content: center;
-    font-family: "Roboto Slab", serif;
-    
-}
-
-.logo{
-    height:65px;
-    width: 55px;
-    margin-left: 15px;
-}
-
-.logo2 {
-    height:65px;
-    width: 55px;
-    margin-left: 15px;
-    opacity: 0.5;
-    background-color: blue;
-}
-
-.logo-text2 {
-    background-color: blue;
-}
-
-.item-1{
-    margin-top: 20px;
-    margin-left: 20px;
-    
-}
-
-.FPK-OGE{
-    background-color: white;
-    height: 200px;
-    width: 200px;
-}
-
-.FPK-OGE-OFF{
-    display: none;
-}
-
-.header-off{
-    background-color: blue;
-    flex: 1 0 auto;
-    min-height: 100px;
-    max-height: 100px;
-    border-bottom: 3px white solid;
-}
-
-.main{
-    display: grid;
-	flex-direction: column;
-	min-height: 100%;
-    background-color: rgb(108, 199, 241);
-}
-
-.main-off{
-    display: grid;
-    justify-content: center;
-    margin-left: 200px;
-    margin-top: 100px;
-}
-
-.main-text{
-    margin-top: -100px;
-    margin-left: -100px;
-    font-size: 26px;
-    
-}
-
-
-.off-logo{
-    height: 150px; 
-    width: 210px; 
-    margin-bottom: 30px;
-
-}
-
-.footer-off{
-    background-color: blue;
-    flex: 0 0 auto;
-    min-height: 100px;
-    max-height: 100px;
-    margin-top: auto;
-    border-top: 3px white solid;
-}
-
-.loading {
-    font-weight: bold;
-    display:inline-block;
-    font-family: monospace;
-    font-size: 30px;
-    clip-path: inset(0 3ch 0 0);
-    animation: l 1s steps(4) infinite;
-  }
-  
-  @keyframes l {
-    to {
-      clip-path: inset(0 -1ch 0 0)
-    }
-  }
-
-  .off{
-    background-color: black;
-    height: 100%;
-    width: 100%;
-    
-  }
-
-  .off-none{
-    display: none;
-  }
-
-  .main-none{
-    display: none;
-  }
-
-  .preview {
+.preview {
     background-color: rgba(255, 255, 255, 0.836);
     min-width: 100%;
     min-height: 100%;
@@ -293,4 +165,255 @@ display: flex;
     60% {opacity: 1; margin-right: 350px;}
     90% {opacity: 1; margin-right: 350px;}
     100% {opacity: 1; margin-right: 350px;}
+}
+
+.main{
+    margin-top: auto;
+}
+
+.start-on{
+    background-color: white;
+    border-right: 2px solid rgb(37, 37, 185);
+    border-top: 20px solid rgb(37, 37, 185);
+    border-bottom: 20px solid rgb(37, 37, 185);
+    border-left: 2px solid rgb(37, 37, 185);
+    max-width: 200px;
+    min-height: 100px;
+    border-radius: 10px;
+    transform: rotatex(0deg);
+    transition: 0.2s;
+    transform-origin: bottom;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    display: grid;
+    justify-content: center;
+    z-index: 5;
+}
+
+.start-off{
+    transform: rotatex(90deg);
+    transition: 0.2s;
+}
+
+.feedback{
+    margin-left: 15px;
+}
+
+.text-feedback{
+    padding: 10px 10px;
+}
+
+.logo-main{
+    margin-left: 15px;
+    margin-top: 15px;
+    cursor: pointer;
+    position: relative;
+    width: 100px;
+    transition: 0.1s;
+}
+
+.logo-main:hover{
+    opacity: 0.9;
+    transition: 0.1s;
+}
+
+.logo{
+    height: 65px;
+    width: 55px;
+    margin-left: 26px;
+
+}
+
+.logo-text{
+    color: white;
+    font-size: 14px;
+    margin-top: 0px;
+    position: relative;
+    width: 100px;
+}
+
+.fpk-center{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.FPK{
+    width: 800px;
+    height: 600px;
+    background-color: white;
+    z-index: 2;
+    position: absolute;
+    justify-content: center;
+    display: grid;
+    top: 15%;
+    transform: rotatey(0deg);
+    transition: 0.5s;
+}
+
+.FPK-OFF{
+    transform: rotatey(90deg);
+    transition: 0.5s;
+}
+
+.choice1{
+    margin-top: 200px;
+    transform: rotatey(0deg);
+    transition: 0.5s;
+}
+
+.choice1-off{
+    transform: rotatey(90deg);
+    transition: 0.5s;
+}
+
+.choice1-none{
+    display: none;
+}
+
+.item-choice1{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.btn1-choice1{
+    padding: 10px 10px;
+    background-color: rgba(128, 128, 128, 0.315);
+    border-radius: 5px;
+    border: 1.5px solid gray;
+    cursor: pointer;
+}
+
+.btn2-choice1{
+    padding: 10px 10px;
+    margin-left: 50px;
+    background-color: rgba(128, 128, 128, 0.315);
+    border-radius: 5px;
+    border: 1.5px solid gray;
+    cursor: pointer;
+}
+
+.choice-oge{
+    margin-top: 200px;
+    transform: rotatey(0deg);
+    transition: 0.5s;
+}
+
+.choice-oge-off{
+    transform: rotatey(90deg);
+    transition: 0.5s;
+}
+
+
+
+.item-choice-oge{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.btn1-choice-oge{
+    padding: 10px 10px;
+    font-size: 20px;
+    border-radius: 10px;
+    background-color: rgba(172, 255, 47, 0.404);
+    border: 1.5px solid rgb(97, 161, 0);
+    cursor: pointer;
+}
+
+.btn2-choice-oge{
+    padding: 10px 10px;
+    font-size: 20px;
+    margin-left: 10px;
+    border-radius: 10px;
+    background-color: rgba(255, 145, 0, 0.39);
+    border: 1.5px solid rgb(255, 145, 0);
+    cursor: pointer;
+}
+
+.btn3-choice-oge{
+    padding: 10px 10px;
+    font-size: 20px;
+    margin-left: 10px;
+    border-radius: 10px;
+    background-color: rgba(255, 0, 0, 0.404);
+    border: 1.5px solid red;
+    cursor: pointer;
+}
+
+.choice-ege{
+    margin-top: -250px;
+    transform: rotatey(0deg);
+    transition: 0.5s;
+}
+
+.choice-ege-off{
+    transform: rotatey(90deg);
+    transition: 0.5s;
+}
+
+.item-choice-ege{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.btn1-choice-ege{
+    padding: 10px 10px;
+    font-size: 20px;
+    border-radius: 10px;
+    background-color: rgba(172, 255, 47, 0.404);
+    border: 1.5px solid rgb(97, 161, 0);
+    cursor: pointer;
+}
+
+.btn2-choice-ege{
+    padding: 10px 10px;
+    font-size: 20px;
+    margin-left: 10px;
+    border-radius: 10px;
+    background-color: rgba(255, 145, 0, 0.39);
+    border: 1.5px solid rgb(255, 145, 0);
+    cursor: pointer;
+}
+
+.btn3-choice-ege{
+    padding: 10px 10px;
+    font-size: 20px;
+    margin-left: 10px;
+    border-radius: 10px;
+    background-color: rgba(255, 0, 0, 0.404);
+    border: 1.5px solid red;
+    cursor: pointer;
+}
+
+.off{
+    margin-left: 577px;
+    margin-top: -24px;
+    height: 23px;
+    width: 23px;
+    position: absolute;
+    transition: 0.1s;
+    cursor: pointer;
+}
+
+.off:hover{
+    opacity: 0.9;
+    transition: 0.1s;
+}
+
+.full{
+    height: 23px;
+    width: 23px;
+    margin-left: 553px;
+    margin-top: -24px;
+    position: absolute;
+    transition: 0.1s;
+    cursor: pointer;
+}
+
+.full:hover{
+    opacity: 0.9;
+    transition: 0.1s;
 }
