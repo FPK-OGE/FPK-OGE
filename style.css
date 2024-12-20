@@ -3,6 +3,7 @@ body{
     /* background-image: url(photo/540a2104b8829fa12f853acfb6322251.jpg); */
     background-size: cover;
     background-repeat: no-repeat;
+    overflow: hidden;
 }
 
 .background-day{
