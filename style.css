@@ -1,28 +1,31 @@
+
 html, body {
     overflow-x: hidden;
   }
   body {
-    position: relative
+    position: relative;
+    font-family: "Alegreya", serif;
   }
 
 body{
     margin: 0;
-    /* background-image: url(photo/540a2104b8829fa12f853acfb6322251.jpg); */
     background-size: cover;
     background-repeat: no-repeat;
     overflow: hidden;
+    color: black;
 }
 
 .background-day{
     background-image: url(photo/фон.png);
-    transition: 0.5s;
+    transition: 0.4s;
     opacity: 1;
 }
 
 .background-night{
     background-image: url(photo/540a2104b8829fa12f853acfb6322251.jpg);
-    transition: 0.5s;
+    transition: 0.4s;
     opacity: 1;
+
 }
 
 .button-night{
@@ -67,6 +70,7 @@ body{
 p{
     margin-top: 0;
     margin-bottom: 0;
+    font-family: "Alegreya", serif;
 }
 
 .windxp{
@@ -117,6 +121,8 @@ margin-top: 0;
     margin-right: 5px;
     margin-top: 0px;
     margin-bottom: 0px;
+    font-family: sans-serif;
+    color: white !important;
 }
 
 .preview {
@@ -129,8 +135,9 @@ margin-top: 0;
     justify-content: center;
     align-items: center;
     font-family: "Roboto Slab", serif;
-    animation: preview 8s forwards;
+    animation: preview 6s forwards;
 }
+
 
 @keyframes preview {
     0% {opacity: 1; display: flex;}
@@ -234,10 +241,11 @@ margin-top: 0;
 
 .logo-text{
     color: white;
-    font-size: 14px;
+    font-size: 16px;
     margin-top: 0px;
     position: relative;
     width: 100px;
+
 }
 
 .fpk-center{
@@ -257,7 +265,8 @@ margin-top: 0;
     top: 15%;
     transform: rotatey(0deg);
     transition: 0.5s;
-}
+    color: black;
+    }
 
 .FPK-OFF{
     transform: rotatey(90deg);
@@ -313,6 +322,114 @@ margin-top: 0;
     transition: 0.5s;
 }
 
+.btn1-choice-oge-eazy{
+    transform: rotatey(0deg);
+    transition: 0.5s;
+    margin-top: -300px;
+    display: flex;
+}
+
+.btn1-choice-oge-eazy-off{
+    transform: rotatey(90deg);
+    transition: 0.5s;
+}
+
+.tasks{
+    margin-right: 40px;
+    margin-left: -20px;
+    display: grid;
+}
+
+.tasks-off{
+    opacity: 0.4;
+}
+
+.task-img{
+    transition: 0.4s;
+    filter:invert(0);
+}
+
+.task-img-blur{
+    filter: blur(4px);
+    transition: 0.4s;
+}
+
+.start-button{
+    font-size: 18px;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 5px; /* Скругленные углы */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6); /* Тень */
+    border: none; /* Черная рамка */
+    padding: 10px 20px;
+    font-family: "Alegreya", serif;
+    color: black !important;
+    
+}
+
+.timer-text{
+    font-size: 38px;
+    font-family: 'Calculator', sans-serif;
+                                                
+}
+
+.fading-shadow {
+    padding: 10px 20px;
+    font-size: 18px;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 5px; /* Скругленные углы */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6); /* Тень */
+    border: none; /* Черная рамка */
+    margin-top: 10px;
+    padding: 10px 80px;
+    font-family: "Alegreya", serif;
+    color: black !important;
+    
+}
+
+#answerInput{
+    border: 1px #3993E6 solid;
+    border-radius: 5px;
+    width: 400px;
+    outline: none;
+    transition: 0.4s;
+    margin-top: -20px;
+}
+
+
+.answer-text {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.1s ease-in-out;
+  }
+  
+  .answer-text:active {
+    transform: scale(0.95);
+  }
+  
+  .answer-text::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 200%; /* Ширина волны */
+    height: 150%; /* Высота волны */
+    background: radial-gradient(circle, rgba(255,255,255,0.5), rgba(255,255,255,0));
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .answer-text:active::after {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  
+  body.dark .answer-text::after {
+    background: radial-gradient(circle, rgba(0,0,0,0.5), rgba(0,0,0,0));
+  }
 
 
 .item-choice-oge{
@@ -321,18 +438,54 @@ margin-top: 0;
     margin-top: 30px;
 }
 
+.btn-animation-eazy-oge{
+    display: grid;
+}
+
+.eazyAnimationOge{
+    width: 94px;
+    height: 18px;
+    position: absolute;
+    bottom: 130px;
+    opacity: 1;
+    transition: 0.3s;
+    pointer-events: none;
+}
+
+.eazyAnimationOge-off{
+    bottom: 100px;
+    opacity: 0;
+    transition: 0.3s;
+}
+
 .btn1-choice-oge{
     padding: 10px 10px;
-    font-size: 20px;
+    font-size: 26px;
     border-radius: 10px;
     background-color: rgba(172, 255, 47, 0.404);
     border: 1.5px solid rgb(97, 161, 0);
     cursor: pointer;
 }
 
+.green-frame{
+    position: absolute;
+    width: 95px;
+    height: 150px;
+    clip-path: inset(50% 0 0 0); /* Обрезаем снизу на 50% */
+    top: 60px;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.green-frame-off{
+    top: 30px;
+    transition: 0.3s;
+    opacity: 0;
+}
+
 .btn2-choice-oge{
     padding: 10px 10px;
-    font-size: 20px;
+    font-size: 26px;
     margin-left: 10px;
     border-radius: 10px;
     background-color: rgba(255, 145, 0, 0.39);
@@ -342,7 +495,7 @@ margin-top: 0;
 
 .btn3-choice-oge{
     padding: 10px 10px;
-    font-size: 20px;
+    font-size: 26px;
     margin-left: 10px;
     border-radius: 10px;
     background-color: rgba(255, 0, 0, 0.404);
@@ -351,7 +504,7 @@ margin-top: 0;
 }
 
 .choice-ege{
-    margin-top: -250px;
+    margin-top: -200px;
     transform: rotatey(0deg);
     transition: 0.5s;
 }
@@ -369,7 +522,7 @@ margin-top: 0;
 
 .btn1-choice-ege{
     padding: 10px 10px;
-    font-size: 20px;
+    font-size: 26px;
     border-radius: 10px;
     background-color: rgba(172, 255, 47, 0.404);
     border: 1.5px solid rgb(97, 161, 0);
@@ -378,7 +531,7 @@ margin-top: 0;
 
 .btn2-choice-ege{
     padding: 10px 10px;
-    font-size: 20px;
+    font-size: 26px;
     margin-left: 10px;
     border-radius: 10px;
     background-color: rgba(255, 145, 0, 0.39);
@@ -388,13 +541,15 @@ margin-top: 0;
 
 .btn3-choice-ege{
     padding: 10px 10px;
-    font-size: 20px;
+    font-size: 26px;
     margin-left: 10px;
     border-radius: 10px;
     background-color: rgba(255, 0, 0, 0.404);
     border: 1.5px solid red;
     cursor: pointer;
 }
+
+
 
 .off{
     margin-left: 577px;

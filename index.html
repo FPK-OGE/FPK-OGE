@@ -8,7 +8,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
  <link rel="icon" href="photo/23r4123412.png">
- <link rel="stylesheet" href="button.css">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/calculator" rel="stylesheet">
     <title>ФПК ОГЭ/ЕГЭ</title>
 </head>
 <body class="background-day background-night" id="background-js">
@@ -27,32 +30,80 @@
     </div>
 
 
-
     <div class="windxp">
         <header>
             <div class="fpk-center">
                 <div class="FPK FPK-OFF" id="FPK-JS">
                     <div class="choice1 choice1-off" id="choice1-js">
-                        <h1 style="margin-left: 30px;">Выбор экзамена:</h1>
+                        <h1 style="margin-left: 105px;">Выбор экзамена:</h1>
                         <div class="item-choice1">
                             <button class="btn1-choice1" id="btn1-choice1-js"><p style="font-size: 26px;">ОГЭ</p></button>
                             <button class="btn2-choice1" id="btn2-choice1-js"><p style="font-size: 26px;">ЕГЭ</p></button>
                         </div>
                     </div>
                     <div class="choice-oge choice-oge-off" id="choice-oge-js">
-                        <h1 style="margin-left: 20px;">Выбор сложности1:</h1>
+                        <h1 style="margin-left: 90px;">Выбор сложности1:</h1>
                         <div class="item-choice-oge">
-                            <button class="btn1-choice-oge" id="btn1-choice-oge-js"><p>легкая</p></button>
+                            <div class="btn-animation-eazy-oge">
+                                <img src="photoOgeEge/eazyAnimationOge.png" alt="" class="eazyAnimationOge eazyAnimationOge-off">
+                                <button class="btn1-choice-oge" id="btn1-choice-oge-js"><p>легкая</p></button>
+                                <img src="photoOgeEge/зел рамка.png" alt="" class="green-frame green-frame-off">
+                            </div>
                             <button class="btn2-choice-oge" id="btn2-choice-oge-js"><p>средняя</p></button>
                             <button class="btn3-choice-oge" id="btn3-choice-oge-js"><p>сложная</p></button>
                         </div>
                     </div>
                     <div class="choice-ege choice-ege-off" id="choice-ege-js">
-                        <h1 style="margin-left: 20px;">Выбор сложности2:</h1>
+                        <h1 style="margin-left: 90px;">Выбор сложности2:</h1>
                         <div class="item-choice-ege">
                             <button class="btn1-choice-ege" id="btn1-choice-ege-js"><p>легкая</p></button>
                             <button class="btn2-choice-ege" id="btn2-choice-ege-js"><p>средняя</p></button>
                             <button class="btn3-choice-ege" id="btn3-choice-ege-js"><p>сложная</p></button>
+                        </div>
+                    </div>
+                    <div class="oge oge-off" id="oge-js">
+                        <div class="btn1-choice-oge-eazy btn1-choice-oge-eazy-off" id="btn1-choice-oge-eazy-js">
+                            <div class="tasks tasks-off">
+                                <img src="photoOgeEge/ogeeazy1.jpg" alt="" class="task-img task-img-blur">
+
+                               <form  id="answerForm">
+                                    <label for="answer">Ответ:</label><br>
+                                    <input type="text" id="answerInput" name="answer" autocomplete="off"><br>
+                                    <button type="button" onclick="checkAnswer()" class="answer-text fading-shadow">Следующий вопрос</button>
+                                </form>
+                            
+                                <div id="finalResults" style="display: none;">
+                                    <h2>Итоговые результаты:</h2>
+                                    <ul id="resultsList"></ul>
+                                </div>
+
+                                <img src="" alt="">
+                                <img src="" alt="">
+                                <img src="" alt="">
+                                <img src="" alt="">
+                            </div>
+                            <div class="timer-container">
+                                <button class="start-button" data-duration="120000">Начать тест</button>
+                                <div class="timer-text">02:00:000</div>
+                            </div>
+                        </div>
+                        <div class="btn2-choice-oge-average" id="btn2-choice-oge-average-js">
+
+                        </div>
+                        <div class="btn3-choice-oge-complicated" id="btn3-choice-oge-complicated-js">
+
+                        </div>
+                    </div>
+
+                    <div class="ege" id="ege-js">
+                        <div class="btn1-choice-ege-eazy" id="btn1-choice-ege-eazy-js">
+
+                        </div>
+                        <div class="btn2-choice-ege-average" id="btn2-choice-ege-average-js">
+
+                        </div>
+                        <div class="btn3-choice-ege-complicated" id="btn3-choice-ege-complicated-js">
+
                         </div>
                     </div>
                 </div>
@@ -61,7 +112,7 @@
                 <img src="photo/LOGO.png" alt="" class="logo">
                 <h1 class="logo-text">ФПК ОГЭ/ЕГЭ</h1>
             </div>
-            <div class="button-night">
+            <div class="button-night" onclick="night()">
                 <button class="btn-night" id="btn-night-js"><div class="circle-day circle-nights" id="circle-js"></div></button>
             </div>
         </header>
@@ -80,5 +131,6 @@
     </div>
  
 <script src="script.js"></script>
+
 </body>
 </html>
